@@ -1,3 +1,5 @@
+const path = require("path");
+
 const config = {
   projectName: 'sell',
   date: '2021-9-29',

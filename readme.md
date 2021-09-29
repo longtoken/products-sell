@@ -1,6 +1,8 @@
 React Native Template for Taro
 ====
-
+ TypeScript
+ Sass 支持
+ 状态管理(mobx)
 ## requirement
 
 0. taro: `@tarojs/cli@^3.2.0`

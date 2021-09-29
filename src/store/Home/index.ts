@@ -1,5 +1,6 @@
 import { makeAutoObservable, runInAction } from "mobx";
-import request, { Product } from '@service/Home';
+import request from '@service/Home';
+import { Product } from "src/interface/Home/index.interface";
 
 class HomeStore {
   constructor() {
@@ -11,10 +12,8 @@ class HomeStore {
     let result: Product[] = [];
     try {
       const response = await request.fetchProducts();
-      console.log(response, '---response');
       if (response && response.data) {
         runInAction(() => {
-          console.log('---write')
           this.allProduct = response.data;
         });
       }

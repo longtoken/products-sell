@@ -4,11 +4,9 @@ import {
   // showToast,
 } from "@tarojs/taro";
 import { getAccessToken } from "@utils/tools";
-import ApiConfig from "@utils/api";
+import {Path} from "@utils/globalData";
 
-export const imgUrl = ApiConfig.ORIGIN + ApiConfig.img;
-export const apiUrl = ApiConfig.ORIGIN + ApiConfig.api;
-export const fileUrl = ApiConfig.ORIGIN + ApiConfig.file;
+export const apiUrl = Path.ORIGIN + Path.API;
 
 enum ECode {
   UN_AUTHORIZED = '401', // 没有登录
@@ -42,7 +40,7 @@ addInterceptor(interceptor);
 function request<T>(url: string, options: TOptions): Promise<IApiData<T>> {
   return new Promise((resolve, reject) => {
     _request<IApiData<T>>({
-      url: ApiConfig.ORIGIN + url,
+      url: Path.ORIGIN + url,
       ...options
     }).then(data => {
       resolve(data.data);

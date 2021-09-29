@@ -1,20 +1,9 @@
 
+import { HomeApi } from "@utils/apiPath";
 import httpService from "@utils/request";
-import url from '@utils/api';
+import { Product } from "src/interface/Home/index.interface";
 
-export const API_URL = {
-  allProduct: `${url.api}/v1/getAllProduct`,
-};
-
-export interface Product {
-  id: number;
-  name: string;
-  age: number;
-  created_at: string;
-  updated_at: string;
-}
-
-const fetchProducts = () => httpService.get<Record<string, unknown>, Product[]>(API_URL.allProduct);
+const fetchProducts = () => httpService.get<Record<string, unknown>, Product[]>(HomeApi.allProduct);
 
 export default {
   fetchProducts

@@ -1,5 +1,6 @@
 import { makeAutoObservable } from "mobx";
-import fetch, { RegisterReq } from '@service/Public'
+import fetch from '@service/Public'
+import { RegisterReq } from "src/interface/Public/index.interface";
 class GlobalStore {
   customerId = "";
   customerName = "Roc";

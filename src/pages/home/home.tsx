@@ -1,10 +1,10 @@
 import { View, Text } from "@tarojs/components";
-// import { observer } from "@store/utils";
-import "./home.scss";
-import { useLocalStore, useObserver } from 'mobx-react';
 import homeStore from '@store/Home';
 import { navigateTo } from "@tarojs/taro";
 import { useEffect } from "react";
+import { useLocalStore, useObserver } from 'mobx-react';
+
+import "./home.scss";
 
 const Index = () => {
   const localHomeStore = useLocalStore(() => homeStore);
