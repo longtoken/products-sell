@@ -52,6 +52,9 @@ const config = {
     }
   },
   h5: {
+    devServer: {
+      port: '3009'
+    },
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
