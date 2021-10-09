@@ -1,11 +1,11 @@
 import { View, Text, Input, Button, BaseEventOrig } from "@tarojs/components";
 import { useCallback, useState } from "react";
-import { useLocalStore, useObserver } from 'mobx-react';
+import { useLocalObservable, Observer } from 'mobx-react';
 import userStore from '@store/User';
-import { EventDetail } from "..";
+import { EventDetail } from "../index";
 
 const Experiment = props => {
-  const localUserStore = useLocalStore(() => userStore);
+  const localUserStore = useLocalObservable(() => userStore);
   // const { GlobalStore } = useStore();
 
   const [usernameText, setUsernameText] = useState('');
@@ -40,21 +40,23 @@ const Experiment = props => {
     // console.log(e);
     setPasswordText(e.detail.value);
   };
-  return useObserver(() => (
-    <View className="passport-register">
-      <View className="username">
-        <Text>用户名：</Text>
-        <Input type="text" className="input" value={usernameText} onInput={onUsernameInput} />
+  return <Observer>
+    {() => (
+      <View className="passport-register">
+        <View className="username">
+          <Text>用户名：</Text>
+          <Input type="text" className="input" value={usernameText} onInput={onUsernameInput} />
+        </View>
+        <View className="password">
+          <Text>密码：</Text>
+          <Input type="text" className="input" value={passwordText} onInput={onPasswordInput} />
+        </View>
+        <View className="submit">
+          <Button type="primary" onClick={submitForm}>注册</Button>
+        </View>
       </View>
-      <View className="password">
-        <Text>密码：</Text>
-        <Input type="text" className="input" value={passwordText} onInput={onPasswordInput} />
-      </View>
-      <View className="submit">
-        <Button type="primary" onClick={submitForm}>注册</Button>
-      </View>
-    </View>
-  ));
+    )}
+  </Observer>
 };
 
 

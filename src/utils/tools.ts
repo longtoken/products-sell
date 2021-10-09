@@ -1,8 +1,5 @@
-import Taro
-  // , { hideLoading, showModal } 
-  from "@tarojs/taro";
+import Taro from "@tarojs/taro";
 import { globalData } from "./globalData";
-
 
 export function saveAccessToken(token: string) {
   globalData.accessToken = token;

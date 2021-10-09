@@ -1,0 +1,87 @@
+.product {
+  .swipe {
+    padding: 10px 15px;
+    .img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .content {
+    padding: 0 15px;
+    .money {
+      display: flex;
+      .price {
+        line-height: 18px;
+        margin-right: 8px;
+        .currency {
+          font-size: 18px;
+          font-weight: bold;
+          color: rgb(255, 49, 49);
+        }
+        .text {
+          font-size: 18px;
+          font-weight: bold;
+          color: rgb(255, 49, 49);
+        }
+      }
+      .discountPrice {
+        line-height: 14px;
+        text-decoration: line-through;
+        color: rgb(190, 190, 190);
+        .currency {
+          font-size: 12px;
+          color: rgb(190, 190, 190);
+        }
+        .text {
+          font-size: 12px;
+          color: rgb(190, 190, 190);
+        }
+      }
+    }
+    .title {
+      padding: 6px 0;
+      line-height: 18px;
+      .name {
+        font-size: 18px;
+      }
+    }
+    .desc {
+      line-height: 14px;
+      .name {
+        font-size: 14px;
+        color: #333;
+      }
+    }
+    .count {
+      padding: 20px 0;
+      display: flex;
+      .col {
+        margin-right: 10px;
+        .text {
+          font-size: 14px;
+          color: #333;
+        }
+      }
+    }
+    .selection {
+      .col {
+        border-bottom: 1px solid #333;
+        .property {
+          .name {
+            
+          }
+        }
+        .actions {
+          .value {
+
+          }
+          .icon {
+
+          }
+        }
+      }
+    }
+  }
+}

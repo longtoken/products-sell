@@ -1,13 +1,11 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import request from '@service/Home';
 import { Product } from "src/interface/Home/index.interface";
-
 class HomeStore {
   constructor() {
     makeAutoObservable(this)
   }
   allProduct: Product[] = [];
-
   async getProducts() {
     let result: Product[] = [];
     try {
@@ -20,7 +18,6 @@ class HomeStore {
     } catch (e) {
       console.log(e);
     }
-
     return result;
   }
 }

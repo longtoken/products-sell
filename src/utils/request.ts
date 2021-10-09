@@ -35,7 +35,7 @@ const interceptor: Taro.interceptor = function (chain) {
     return res;
   });
 };
-addInterceptor(interceptor);
+typeof addInterceptor === 'function' && addInterceptor(interceptor);
 
 function request<T>(url: string, options: TOptions): Promise<IApiData<T>> {
   return new Promise((resolve, reject) => {

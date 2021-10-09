@@ -29,14 +29,13 @@ class UserStore {
     let result = {} as IApiData<string>;
     try {
       const response = await fetch.loginAccount(params);
-      if (response && response.data) {
+      if (response && response.code === '200') {
         result = response;
         saveAccessToken(response.data);
       }
     } catch (e) {
       console.log(e);
     }
-
     return result;
   }
 }

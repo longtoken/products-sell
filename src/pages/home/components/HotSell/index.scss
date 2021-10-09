@@ -1,0 +1,89 @@
+.hotSell {
+  padding: 0 30px;
+  background-color: white;
+}
+.hotSell-title {
+  padding-left: 30px;
+  padding-bottom: 40px;
+}
+.hotSell-title-text {
+  font-size: 72px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.scroll-wrap {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+.scroll-wrap-picture {
+  flex: 3;
+}
+.scroll-wrap-img {
+  width: 380px;
+  height: 380px;
+  border-radius: 30px;
+}
+.scroll-wrap-content {
+  flex: 7;
+  padding-left: 40px;
+}
+.scroll-wrap-content-name {
+  line-height: 64px;
+  padding: 20px 0;
+  
+}
+.scroll-wrap-content-text {
+  font-size: 64px;
+}
+.scroll-wrap-content-desc {
+  line-height: 30px;
+  
+}
+.scroll-wrap-content-desc-text {
+    color: #333;
+    font-size: 56px;
+}
+.scroll-wrap-content-money {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: row;
+}
+.scroll-wrap-content-money-price {
+  line-height: 56px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+}
+.currency-red {
+  font-size: 56px;
+  font-weight: bold;
+  color: rgb(255, 49, 49);
+}
+.text-red {
+  font-size: 56px;
+  font-weight: bold;
+  color: rgb(255, 49, 49);
+}
+.scroll-wrap-content-money-discountPrice {
+  line-height: 56px;
+  text-decoration: line-through;
+  color: rgb(190, 190, 190);
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+.line-through  {
+  text-decoration: line-through;
+  text-decoration-color:rgb(190, 190, 190);
+}
+.currency {
+  font-size: 56px;
+  color: rgb(190, 190, 190);
+}
+.text {
+  font-size: 56px;
+  color: rgb(190, 190, 190);
+}

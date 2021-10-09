@@ -1,26 +1,31 @@
 import { View, Text } from "@tarojs/components";
 import userStore from '@store/User';
-import { useLocalStore, useObserver } from 'mobx-react';
-import Register from './Components/register';
-import Login from './Components/login';
+import { useLocalObservable, Observer } from 'mobx-react';
+import Register from './components/Register';
+import Login from './components/Login';
 
 import "./index.scss";
+import { reLaunch } from "@tarojs/taro";
 export interface EventDetail {
   value: string;
 }
 
 const Index = () => {
-  const localUserStore = useLocalStore(() => userStore);
+  const localUserStore = useLocalObservable(() => userStore);
 
-  return useObserver(() => (
-    <View className="index">
-      <View>
-        <Text>{localUserStore.token}-call</Text>
+  return <Observer>
+    {() => (
+      <View className="index">
+        <View>
+          <Text onClick={() => {
+            reLaunch({ url: '/pages/home/home' });
+          }}>{localUserStore.token}-call</Text>
+        </View>
+        <Register />
+        <Login />
       </View>
-      <Register />
-      <Login />
-    </View>
-  ));
+    )}
+  </Observer>
 };
 
 export default Index;
